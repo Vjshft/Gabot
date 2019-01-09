@@ -1,0 +1,15 @@
+INSTRUCCIONES GABOT
+
+Para correr la aplicación (predecir)
+
+1. Correr el backend con el comando
+	python poet_backend.py
+
+2. Abrir el archivo poet_front.html en un navegador web.
+
+Para entrenar el modelo
+
+1. Abrir una terminal dentro del proyecto e ingresar el directorio /train
+
+2. Correr el comando
+	gcloud: gcloud ml-engine jobs submit training JOB18 --module-name=trainer.task --package-path=./trainer --job-dir=gs://model-bot --region=us-central1 --config=trainer/cloudml-gpu.yaml
